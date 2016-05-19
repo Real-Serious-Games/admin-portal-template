@@ -1,0 +1,30 @@
+{
+	"production": false,
+	"database": "localhost:27017/yourdatabase",
+	"endPointPrefix": "/api/v1",
+	"secret": "your-secret-key",
+	"log": {
+		"source": "admin-portal",
+		"server": ""
+	},
+	"mail": {
+		"enabled": false,
+	    "to": "<email-for-notifications>",
+	    "from": "<from-email-address>",
+	    "replyTo": "<reply-to-email-address>",
+	    "subjectPrefix": "Admin Portal: ",
+    	"host": "smtp.gmail.com",
+    	"username": "<your-gmail-login>",
+    	"password": "<your-gmail-password>"
+	},
+	"endpoints": [
+		{
+			"name": "customers",
+			"collection": "customers"
+		},
+		{
+			"name": "sales",
+			"collection": "sales"
+		}
+	]
+}
