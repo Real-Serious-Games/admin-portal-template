@@ -37,6 +37,9 @@ angular.module('customize', ['ng-admin'])
 		    nga.field("email")
 				.label("Email")
 				,
+		    nga.field("gender")
+				.label("Gender")
+				,
 		])
     	.fields([
 		    nga.field('_id')
@@ -49,6 +52,9 @@ angular.module('customize', ['ng-admin'])
 		    nga.field("email")
 				.label("Email")
 				,
+		    nga.field("gender")
+				.label("Gender")
+				,
 		]);
 
 	customer.creationView()
@@ -60,6 +66,14 @@ angular.module('customize', ['ng-admin'])
 		    nga.field("email")
 				.label("Email")
 				.validation({ required: true })
+				,
+		    nga.field("gender", 'choice')
+				.label("Gender")
+				.validation({ required: true })
+				.choices([
+					{ label: 'Male', value: 'Male' },
+					{ label: 'Female', value: 'Female' },
+				])
 				,
 		]);
 
